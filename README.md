@@ -1,2 +1,2 @@
-# Full-Stack-Final--PERN-Portfolio
+# Final-PERN-Portfolio
 Weather API project using PERN stack.
