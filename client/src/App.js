@@ -8,6 +8,8 @@ import {
   Jumbotron,
   InputGroup,
   Input,
+  InputGroupAddon,
+  Button,
   Col
 } from 'reactstrap';
 
@@ -60,6 +62,11 @@ class App extends Component {
               value={this.state.newCityName}
               onChange={this.handleInputChange}
               />
+
+          <InputGroupAddon addonType="append">
+             <Button color="primary" onClick={this.handleAddCity}>Add City</Button>
+           </InputGroupAddon>
+
         </InputGroup>
       </Jumbotron>       
       
