@@ -39,6 +39,19 @@ class App extends Component {
     this.setState({ newCityName: e.target.value });
   };
 
+  handleAddCity = () => {
+    fetch('/api/cities', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ city: this.state.newCityName })
+    })
+    .then(res => res.json())
+    .then(res => {
+      this.getCityList();
+      this.setState({ newCityName: '' });
+    });
+  };
+
   componentDidMount () {
     this.getCityList();
   }
